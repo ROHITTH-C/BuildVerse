@@ -3,47 +3,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../../assets/css/dashboard.css';
-import { useEffect } from 'react';
+import Sidebar from '../../components/Sidebar';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Dashboard() {
-    useEffect(() => {
-        require('../../assets/js/dashboard.js');
-      }, []);
-
   return (
     <div className="dashboard-container">
-      <div className="sidebar">
-        <div className="sidebar-header">
-          <a href="#" className="logo-link">
-            <i className="fas fa-code"></i>
-            <h1>BuildVerse</h1>
-          </a>
-          <p className="tagline">Where projects find people and people find purpose</p>
-        </div>
-
-        <nav className="sidebar-nav">
-          <ul>
-            <li className="active" data-target="profile-section">
-              <i className="fas fa-user"></i>
-              <span>My Profile</span>
-            </li>
-            <li data-target="contribute-section">
-              <i className="fas fa-hands-helping"></i>
-              <span>Contribute</span>
-            </li>
-            <li data-target="upload-section">
-              <i className="fas fa-cloud-upload-alt"></i>
-              <span>Upload Projects</span>
-            </li>
-          </ul>
-        </nav>
-
-        <div className="sidebar-footer">
-          <button className="btn btn-logout">
-            <i className="fas fa-sign-out-alt"></i> LOGOUT
-          </button>
-        </div>
-      </div>
+      <Sidebar />
 
       {/* Main Content */}
       <div className="main-content">
@@ -75,29 +42,6 @@ export default function Dashboard() {
                   <span className="info-value" id="projects-uploaded">3</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contribute Section */}
-        <section id="contribute-section" className="content-section">
-          <div className="section-header">
-            <h2><i className="fas fa-hands-helping me-2"></i>Contribute</h2>
-            <div className="section-tabs">
-              <button className="tab-btn active" data-tab="available-projects">Available Projects</button>
-              <button className="tab-btn" data-tab="ongoing-projects">Ongoing Projects</button>
-            </div>
-          </div>
-
-          <div className="tab-content active" id="available-projects">
-            {/* Cards go here (repeatable) */}
-          </div>
-
-          <div className="tab-content" id="ongoing-projects">
-            <div className="empty-state">
-              <i className="fas fa-folder-open"></i>
-              <h3>NO ONGOING PROJECTS</h3>
-              <p>You're not currently contributing to any projects</p>
             </div>
           </div>
         </section>
