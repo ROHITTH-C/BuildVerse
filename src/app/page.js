@@ -24,10 +24,10 @@ export default function Home() {
             Where projects find people and people find purpose
           </span>
           <button className="btn btn-outline-light login-btn ms-auto animate__animated animate__fadeInRight">
-            <Link href="/dashboard" className="fas fa-sign-in-alt me-2"></Link>Dashboard
+            <Link href="/dashboard" className="fas fa-sign-in-alt me-2"> Dashboard</Link>
           </button>
           <button className="btn btn-outline-light login-btn ms-auto animate__animated animate__fadeInRight">
-            <Link href="/login" className="fas fa-sign-in-alt me-2"></Link>LOGIN
+            <Link href="/login" className="fas fa-sign-in-alt me-2"> LOGIN</Link>
           </button>
         </div>
       </nav>
